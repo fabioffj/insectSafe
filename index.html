@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>InsectSafe Kids</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logos">
+
+<img src="imagens/logo_ppg.png">
+<img src="imagens/logo_unipampa.png">
+
+</div>
+
+
+<h1>🧪 InsectSafe Kids</h1>
+
+<p>
+Uso racional de inseticidas e proteção do ambiente
+</p>
+
+
+</header>
+
+
+
+<section id="inicio" class="card">
+
+<h2>Bem-vindo, cientista!</h2>
+
+
+<p>
+Alguns insetos podem causar problemas dentro de casa,
+mas precisamos aprender a controlar esses animais
+de forma segura para pessoas, animais e ambiente.
+</p>
+
+
+<button onclick="iniciar()">
+Começar missão
+</button>
+
+
+</section>
+
+
+
+
+
+<section id="insetos" class="card escondido">
+
+
+<h2>Qual inseto você deseja controlar?</h2>
+
+
+<div class="opcoes">
+
+
+<button onclick="selecionarInseto('mosquito')">
+
+<img src="imagens/mosquito.png">
+Mosquito
+
+</button>
+
+
+
+<button onclick="selecionarInseto('barata')">
+
+<img src="imagens/barata.png">
+Barata
+
+</button>
+
+
+
+<button onclick="selecionarInseto('formiga')">
+
+<img src="imagens/formiga.png">
+Formiga
+
+</button>
+
+
+
+<button onclick="selecionarInseto('mosca')">
+
+<img src="imagens/mosca.png">
+Mosca
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="animais" class="card escondido">
+
+
+<h2>Você possui animal de estimação?</h2>
+
+
+<div class="opcoes">
+
+
+<button onclick="selecionarAnimal('cachorro')">
+
+🐶 Cachorro
+
+</button>
+
+
+<button onclick="selecionarAnimal('gato')">
+
+🐱 Gato
+
+</button>
+
+
+<button onclick="selecionarAnimal('outro')">
+
+🐰 Outro animal
+
+</button>
+
+
+<button onclick="selecionarAnimal('nenhum')">
+
+❌ Não tenho
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="resultado" class="card escondido">
+
+
+<h2>Resultado da missão 🔬</h2>
+
+
+<div id="resposta"></div>
+
+
+
+<button onclick="reiniciar()">
+
+Nova missão
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+
+<p>
+Projeto de Extensão - Fábio Ferretto Jaenisch e Vitória Costa Tadeu
+<br>
+
+Programa de Pós-Graduação em Bioquímica
+
+</p>
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>
