@@ -1,6 +1,6 @@
 body{
 
-font-family: Arial, sans-serif;
+font-family: "Arial", sans-serif;
 
 background:#e8f5e9;
 
@@ -8,15 +8,18 @@ margin:0;
 
 padding:0;
 
-text-align:center;
-
 color:#263238;
+
+text-align:center;
 
 }
 
 
 
-/* CABEÇALHO */
+/* =========================
+   CABEÇALHO
+========================= */
+
 
 header{
 
@@ -24,7 +27,7 @@ background:#1565c0;
 
 color:white;
 
-padding:15px;
+padding:20px;
 
 }
 
@@ -38,7 +41,7 @@ justify-content:center;
 
 align-items:center;
 
-gap:20px;
+gap:25px;
 
 flex-wrap:wrap;
 
@@ -48,9 +51,9 @@ flex-wrap:wrap;
 
 .logos img{
 
-height:60px;
+height:70px;
 
-max-width:150px;
+max-width:160px;
 
 object-fit:contain;
 
@@ -60,7 +63,7 @@ object-fit:contain;
 
 h1{
 
-font-size:clamp(26px,5vw,38px);
+font-size:clamp(28px,5vw,40px);
 
 margin:10px;
 
@@ -76,7 +79,69 @@ font-size:18px;
 
 
 
-/* CARTÕES */
+
+
+
+/* =========================
+   MENU
+========================= */
+
+
+nav{
+
+margin-top:20px;
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+nav a{
+
+text-decoration:none;
+
+color:white;
+
+background:#0d47a1;
+
+padding:12px 18px;
+
+border-radius:20px;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+
+
+nav a:hover{
+
+background:#43a047;
+
+transform:scale(1.05);
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   CARTÕES GERAIS
+========================= */
+
 
 .card{
 
@@ -86,13 +151,13 @@ width:90%;
 
 max-width:900px;
 
-margin:25px auto;
+margin:30px auto;
 
-padding:25px;
+padding:30px;
 
-border-radius:20px;
+border-radius:25px;
 
-box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 
 box-sizing:border-box;
 
@@ -102,7 +167,19 @@ box-sizing:border-box;
 
 .card h2{
 
-font-size:clamp(22px,4vw,30px);
+font-size:clamp(24px,4vw,32px);
+
+color:#1565c0;
+
+}
+
+
+
+.card p{
+
+font-size:18px;
+
+line-height:1.6;
 
 }
 
@@ -110,9 +187,14 @@ font-size:clamp(22px,4vw,30px);
 
 
 
-/* BOTÕES */
+
+/* =========================
+   BOTÕES
+========================= */
+
 
 button{
+
 
 background:#43a047;
 
@@ -120,17 +202,18 @@ color:white;
 
 border:none;
 
-padding:15px;
+padding:15px 25px;
 
-margin:10px;
-
-border-radius:15px;
+border-radius:20px;
 
 font-size:18px;
 
 cursor:pointer;
 
+margin:10px;
+
 transition:0.3s;
+
 
 }
 
@@ -138,16 +221,26 @@ transition:0.3s;
 
 button:hover{
 
+
 background:#2e7d32;
+
+transform:scale(1.05);
+
 
 }
 
 
 
 
-/* OPÇÕES */
+
+
+/* =========================
+   CARTAS DOS INSETOS
+========================= */
+
 
 .opcoes{
+
 
 display:flex;
 
@@ -157,33 +250,88 @@ align-items:center;
 
 flex-wrap:wrap;
 
-gap:15px;
+gap:25px;
 
 }
 
 
 
-.opcoes button{
 
-width:180px;
 
-height:170px;
+.cartaInseto{
+
+
+background:#ffffff;
+
+color:#263238;
+
+width:220px;
+
+min-height:280px;
+
+border-radius:25px;
+
+border:3px solid #81c784;
+
+padding:20px;
+
+cursor:pointer;
+
+
+box-shadow:0 8px 15px rgba(0,0,0,0.15);
+
+
+transition:0.4s;
+
 
 }
 
 
 
-.opcoes img{
 
-width:90px;
+.cartaInseto:hover{
 
-height:90px;
+
+transform:translateY(-12px) scale(1.05);
+
+
+box-shadow:0 15px 25px rgba(0,0,0,0.25);
+
+
+}
+
+
+
+.cartaInseto img{
+
+
+width:120px;
+
+height:120px;
 
 object-fit:contain;
 
-display:block;
 
-margin:auto;
+}
+
+
+
+.cartaInseto h3{
+
+
+color:#1565c0;
+
+font-size:22px;
+
+
+}
+
+
+
+.cartaInseto p{
+
+
+font-size:15px;
 
 }
 
@@ -191,19 +339,15 @@ margin:auto;
 
 
 
-/* TEXTO DO RESULTADO */
 
-#resposta{
 
-text-align:left;
-
-line-height:1.6;
-
-}
-
+/* =========================
+   RESULTADO
+========================= */
 
 
 #resultado{
+
 
 border:5px solid #1565c0;
 
@@ -211,26 +355,88 @@ border:5px solid #1565c0;
 
 
 
-/* ESCONDER TELAS */
+#resposta{
 
-.escondido{
 
-display:none;
+text-align:left;
+
+}
+
+
+
+#resposta h3{
+
+
+color:#2e7d32;
+
 
 }
 
 
 
 
+
+
+
+
+/* =========================
+   ESCONDER ELEMENTOS
+========================= */
+
+
+.escondido{
+
+
+display:none;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   BIOQUÍMICA
+========================= */
+
+
+#bioquimica{
+
+
+background:#f1f8e9;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+
 footer{
+
 
 background:#263238;
 
 color:white;
 
-padding:20px;
+padding:25px;
 
-font-size:14px;
+margin-top:40px;
+
+font-size:15px;
+
 
 }
 
@@ -238,7 +444,14 @@ font-size:14px;
 
 
 
-/* CELULAR */
+
+
+
+
+/* =========================
+   CELULAR
+========================= */
+
 
 @media(max-width:600px){
 
@@ -246,63 +459,152 @@ font-size:14px;
 
 header{
 
-padding:10px;
+padding:15px;
 
 }
+
 
 
 
 .logos img{
 
+
 height:45px;
 
+
 }
+
+
+
+nav{
+
+
+flex-direction:column;
+
+align-items:center;
+
+
+}
+
+
+
+nav a{
+
+
+width:80%;
+
+
+}
+
+
 
 
 
 .card{
 
+
 width:95%;
 
-padding:18px;
+padding:20px;
+
 
 }
 
 
 
-.opcoes{
 
-flex-direction:column;
+.cartaInseto{
 
-}
-
-
-
-.opcoes button{
 
 width:90%;
 
-height:auto;
+max-width:300px;
 
-min-height:120px;
 
 }
+
+
+
+
+
+.cartaInseto img{
+
+
+width:100px;
+
+height:100px;
+
+
+}
+
+
 
 
 
 button{
 
+
 width:90%;
 
-font-size:17px;
 
 }
 
 
 
-#resposta{
+
+.card p{
+
 
 font-size:16px;
+
+
+}
+
+.produtoEscolha{
+
+
+display:block;
+
+background:#f1f8e9;
+
+margin:15px auto;
+
+padding:15px;
+
+border-radius:15px;
+
+width:80%;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+
+}
+
+
+
+.produtoEscolha:hover{
+
+
+transform:scale(1.03);
+
+background:#c8e6c9;
+
+
+}
+
+
+
+.produtoEscolha input{
+
+
+transform:scale(1.5);
+
+margin-right:15px;
+
 
 }
 

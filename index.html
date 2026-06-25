@@ -18,39 +18,70 @@
 
 <header>
 
+
 <div class="logos">
 
-<img src="imagens/logo_ppg.png">
-<img src="imagens/logo_unipampa.png">
+<img src="imagens/logo_ppg.png" alt="Logo PPG Bioquímica">
+
+<img src="imagens/logo_unipampa.png" alt="Logo UNIPAMPA">
 
 </div>
+
 
 
 <h1>🧪 InsectSafe Kids</h1>
 
 <p>
-Uso racional de inseticidas e proteção do ambiente
+Aprendendo sobre insetos e uso seguro de produtos
 </p>
+
+
+
+<nav>
+
+<a href="#inicio">🏠 Início</a>
+
+<a href="#aprenda">📚 Aprenda</a>
+
+<a href="#jogo">🎮 Jogo</a>
+
+<a href="#bioquimica">🔬 Bioquímica</a>
+
+
+</nav>
+
 
 
 </header>
 
 
 
+
+
+
+<!-- INÍCIO -->
+
+
 <section id="inicio" class="card">
 
-<h2>Bem-vindo, cientista!</h2>
+
+<h2>👋 Olá, pequeno cientista!</h2>
 
 
 <p>
-Alguns insetos podem causar problemas dentro de casa,
-mas precisamos aprender a controlar esses animais
-de forma segura para pessoas, animais e ambiente.
+
+Alguns insetos fazem parte da natureza, mas alguns podem causar problemas dentro de casa.
+
+Vamos aprender como cuidar do ambiente e usar produtos contra insetos de um jeito seguro para crianças, animais e natureza!
+
 </p>
 
 
+
 <button onclick="iniciar()">
-Começar missão
+
+Começar missão 🚀
+
 </button>
 
 
@@ -60,68 +91,181 @@ Começar missão
 
 
 
-<section id="insetos" class="card escondido">
 
 
-<h2>Qual inseto você deseja controlar?</h2>
+
+<!-- APRENDA -->
 
 
-<div class="opcoes">
+<section id="aprenda" class="card">
 
 
-<button onclick="selecionarInseto('mosquito')">
+<h2>📚 Aprenda sobre insetos</h2>
+
+
+<p>
+
+Os insetos possuem um corpo cheio de partes importantes que ajudam eles a viver.
+
+Quando precisamos controlar um inseto, devemos escolher uma solução correta e usar com cuidado.
+
+</p>
+
+
+
+<h3>Por que não devemos usar inseticidas de qualquer jeito?</h3>
+
+
+<p>
+
+Porque alguns produtos podem afetar outros seres vivos, como animais de estimação e o ambiente.
+
+Por isso, sempre devemos seguir as instruções do rótulo.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- JOGO -->
+
+
+<section id="jogo" class="card">
+
+
+<h2>🎮 Missão InsectSafe</h2>
+
+
+<p>
+
+Escolha um inseto que você quer controlar:
+
+</p>
+
+
+
+
+<div id="insetos" class="opcoes">
+
+
+<button class="cartaInseto" onclick="selecionarInseto('mosquito')">
+
 
 <img src="imagens/mosquito.png">
-Mosquito
+
+<h3>🦟 Mosquito</h3>
+
+
+<p>
+
+Ajude a cuidar do ambiente!
+
+</p>
+
 
 </button>
 
 
 
-<button onclick="selecionarInseto('barata')">
+
+
+
+
+<button class="cartaInseto" onclick="selecionarInseto('barata')">
+
 
 <img src="imagens/barata.png">
-Barata
+
+
+<h3>🪳 Barata</h3>
+
+
+<p>
+
+Encontre uma solução segura!
+
+</p>
+
 
 </button>
 
 
 
-<button onclick="selecionarInseto('formiga')">
+
+
+
+
+<button class="cartaInseto" onclick="selecionarInseto('formiga')">
+
 
 <img src="imagens/formiga.png">
-Formiga
+
+
+<h3>🐜 Formiga</h3>
+
+
+<p>
+
+Proteja sua casa!
+
+</p>
+
 
 </button>
 
 
 
-<button onclick="selecionarInseto('mosca')">
+
+
+
+
+<button class="cartaInseto" onclick="selecionarInseto('mosca')">
+
 
 <img src="imagens/mosca.png">
-Mosca
+
+
+<h3>🪰 Mosca</h3>
+
+
+<p>
+
+Aprenda a controlar!
+
+</p>
+
 
 </button>
+
 
 
 </div>
 
 
-</section>
 
 
 
+<div id="animais" class="escondido">
 
 
+<h2>🐾 Você tem animal em casa?</h2>
 
 
-<section id="animais" class="card escondido">
+<p>
 
+Essa informação ajuda a escolher uma opção mais segura.
 
-<h2>Você possui animal de estimação?</h2>
+</p>
 
-
-<div class="opcoes">
 
 
 <button onclick="selecionarAnimal('cachorro')">
@@ -131,6 +275,7 @@ Mosca
 </button>
 
 
+
 <button onclick="selecionarAnimal('gato')">
 
 🐱 Gato
@@ -138,11 +283,13 @@ Mosca
 </button>
 
 
+
 <button onclick="selecionarAnimal('outro')">
 
 🐰 Outro animal
 
 </button>
+
 
 
 <button onclick="selecionarAnimal('nenhum')">
@@ -156,7 +303,6 @@ Mosca
 </div>
 
 
-</section>
 
 
 
@@ -164,25 +310,161 @@ Mosca
 
 
 
+<div id="resultado" class="card escondido">
 
-<section id="resultado" class="card escondido">
 
-
-<h2>Resultado da missão 🔬</h2>
+<h2>🔎 Resultado da missão</h2>
 
 
 <div id="resposta"></div>
 
+<div id="escolhaProduto" class="escondido">
 
 
-<button onclick="reiniciar()">
+<h2>🧴 Escolha sua estratégia</h2>
 
-Nova missão
+
+<p>
+
+Agora que você aprendeu, escolha quais opções usaria para resolver a missão:
+
+</p>
+
+
+
+<label class="produtoEscolha">
+
+<input type="checkbox" value="spray">
+
+🧴 Spray inseticida
+
+</label>
+
+
+
+<label class="produtoEscolha">
+
+<input type="checkbox" value="gel">
+
+🟢 Isca em gel
+
+</label>
+
+
+
+<label class="produtoEscolha">
+
+<input type="checkbox" value="repelente">
+
+🌿 Repelente
+
+</label>
+
+
+
+<label class="produtoEscolha">
+
+<input type="checkbox" value="armadilha">
+
+🪤 Armadilha
+
+</label>
+
+
+
+<br>
+
+
+<button onclick="avaliarEscolha()">
+
+Ver minha escolha 🔎
 
 </button>
 
 
+</div>
+
+
+
+
+
+<div id="resultadoEscolha" class="escondido">
+
+
+<h2>🏆 Resultado da escolha</h2>
+
+
+<div id="analiseEscolha"></div>
+
+
+</div>
+
+<button onclick="reiniciar()">
+
+Nova missão 🔄
+
+</button>
+
+
+</div>
+
+
+
+
 </section>
+
+
+
+
+
+
+
+
+
+<!-- BIOQUÍMICA -->
+
+
+<section id="bioquimica" class="card">
+
+
+<h2>🔬 O laboratório do InsectSafe</h2>
+
+
+
+<p>
+
+
+Você sabia?
+
+Assim como nosso corpo possui várias partes trabalhando juntas, os insetos também possuem sistemas importantes para viver.
+
+Alguns inseticidas são feitos para agir em partes específicas do corpo dos insetos.
+
+</p>
+
+
+
+
+<h3>🧬 Como o inseticida funciona?</h3>
+
+
+<p>
+
+
+O inseticida possui uma substância que consegue agir dentro do corpo do inseto.
+
+Ela pode alterar a forma como as células funcionam e ajudar no controle do inseto.
+
+
+</p>
+
+
+
+
+</section>
+
+
+
 
 
 
@@ -193,7 +475,13 @@ Nova missão
 
 
 <p>
-Projeto de Extensão - Fábio Ferretto Jaenisch e Vitória Costa Tadeu
+
+Projeto de Extensão
+
+<br>
+
+Disciplina de Bioquímica
+
 <br>
 
 Programa de Pós-Graduação em Bioquímica
@@ -201,7 +489,9 @@ Programa de Pós-Graduação em Bioquímica
 </p>
 
 
+
 </footer>
+
 
 
 
