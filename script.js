@@ -866,3 +866,63 @@ location.reload();
 
 
 }
+
+function enviarAvaliacao(){
+
+
+let nota = document.querySelector(
+'input[name="nota"]:checked'
+);
+
+
+
+let sugestao = document.getElementById("sugestao").value;
+
+
+
+
+if(nota == null){
+
+
+alert("Escolha uma nota antes de enviar 😊");
+
+return;
+
+
+}
+
+
+
+
+
+let mensagem =
+
+`
+
+Olá!
+
+Avaliação do site InsectSafe Kids:
+
+Nota: ${nota.value}/5
+
+
+Sugestão:
+
+${sugestao}
+
+
+`;
+
+
+
+
+
+window.location.href =
+
+"mailto:fabiojaenisch.aluno@unipampa.edu.br?subject=Avaliação InsectSafe Kids&body="
+
++ encodeURIComponent(mensagem);
+
+
+
+}
